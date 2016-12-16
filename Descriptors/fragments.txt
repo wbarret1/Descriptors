@@ -1,0 +1,239 @@
+As [+5 valence, one double bond]
+As [+5 valence, all single bonds]
+As [+5 valence, two double bonds]
+As [+3 valence, one double bond]
+As [+3 valence, all single bonds]
+As
+B
+-Br [aliphatic attach]
+-Br [aromatic attach]
+-Br [olefinic attach]
+-CH3 [aliphatic attach]
+-CH3 [aromatic attach]
+-CH2- [aliphatic attach]
+-CH2- [aromatic attach]
+-CH< [aliphatic attach]
+-CH< [aromatic attach]
+>C< [aliphatic attach]
+>C< [aromatic attach]
+=CH2 [aliphatic attach]
+-CH= [aromatic attach]
+=CH [aliphatic attach]
+=C [aliphatic attach]
+>C= [aromatic attach]
+#C [aliphatic attach]
+-C# [aromatic attach]
+#CH [aliphatic attach]
+=C=
+ACH
+AC
+Fused aromatic carbon
+ACAC
+-Cl [aliphatic attach]
+-Cl [aromatic attach]
+-Cl [olefinic attach]
+-F [aliphatic attach]
+-F [aromatic attach]
+-F [olefinic attach]
+H [carbon attach]
+H [phosphorus attach]
+H [nitrogen attach]
+H [silicon attach]
+H [other]
+-I [aliphatic attach]
+-I [aromatic attach]
+-I [olefinic attach]
+Pb
+-Hg
+-Hg-
+-Hg+
+Hg
+-O- [nitrogen attach]
+-O- [phosphorus attach]
+-O- [arsenic attach]
+-O- [aromatic attach]
+-O- [oxygen attach]
+-O- [sulfur attach]
+-O- (epoxide)
+-O- [2 aromatic attach]
+-O- [phosphorus, aromatic attach]
+-O- [2 phosphorus attach]
+-O- [aliphatic attach]
+=O [other]
+-OH [phosphorus attach]
+-OH [sulfur attach]
+-OH [arsenic attach]
+-OH [aliphatic attach]
+-OH [nitrogen attach]
+-OH [oxygen attach]
+-OH [aromatic attach]
+AO
+-[O-]
+-NH2 [aliphatic attach]
+-NH2 [aromatic attach]
+-NH2 [nitrogen attach]
+-NH2 [attached to P]
+-NH- [aliphatic attach]
+-NH- [aromatic attach]
+-NH- [3 membered ring]
+-NH- [attached to P]
+-NH- [nitrogen attach]
+-N< [aliphatic attach]
+-N< [aromatic attach]
+-N< [nitrogen attach]
+-N< [attached to P]
+-N< [3 membered ring]
+N+ [four single bonds]
+AN+
+AN
+ANH
+ANH [attached to AN in same ring]
+AN [attached to AN in same ring]
+Fused aromatic nitrogen
+-[N+]#N
+-N=[N+]=[N-]
+-N=NH
+-N=N-
+P [+5 valence, two double bonds]
+P [+5 valence, one double bond]
+P [+5 valence, all single bonds]
+P [+3 valence, all single bonds]
+P
+-SH [aliphatic attach]
+-SH [aromatic attach]
+-S- [aromatic attach]
+-S- [three membered ring]
+-S- [2 aromatic attach]
+-S- [nitrogen attach]
+-S- [sulfur attach]
+-S- [aliphatic attach]
+-S- [arsenic attach]
+-S- [phosphorus attach]
+=S [other]
+->S<-
+AS
+Si [aromatic attach]
+Si [oxygen, aromatic attach]
+Si [oxygen attach]
+Si
+Sn [oxygen attach]
+Sn [aromatic attach]
+Sn
+-C#N [aliphatic attach]
+-C#N [aromatic attach]
+-C#N [olefinic attach]
+CH2=N
+-CH=NH
+-CH=N
+>C=NH
+>C=N
+>C(=N) [Nitrogen attach]
+[C-]#[N+]
+C=[N+]=[N-]
+>C(=N) [2 Nitrogen attach]
+-C([H])=N [Nitrogen attach]
+-C([H])=N[H] [Nitrogen attach]
+>C=N[H] [2 Nitrogen attach]
+>C=N[H] [Nitrogen attach]
+N=C=N
+HN=C=N
+-C#N [aliphatic sulfur attach]
+-C#N [aliphatic nitrogen attach]
+C=O(ketone, aliphatic attach)
+-C(=O)- [aromatic attach]
+-C(=O)- [phosphorus attach]
+-C(=O)- [halogen attach]
+-C(=O)- [2 nitrogen attach]
+-C(=O)- [nitrogen, aliphatic attach]
+-C(=O)- [olefinic attach]
+-C(=O)- [nitrogen, aromatic attach]
+-C(=O)- [2 aromatic attach]
+C=O(non-ketone, aliphatic attach)
+-COOH [aliphatic attach]
+-COOH [aromatic attach]
+-CHO [aliphatic attach]
+-CHO [aromatic attach]
+-CHO [nitrogen attach]
+-C(=O)O- [olefinic attach]
+-C(=O)O- [aromatic attach]
+-C(=O)O- [aliphatic attach]
+-C(=O)O- [nitrogen attach]
+-C(=O)O- [cyclic]
+HC(=O)O-
+-C(=O)OC(=O)-
+-C(=O)[O-]
+-OC(=O)O-
+C=C=O
+CH2=C(CH3)C(=O)O-
+CH2=CHC(=O)O-
+-C(=S)- [aliphatic attach]
+-C(=S)- [aromatic attach]
+-C(=S)- [nitrogen, aliphatic attach]
+-C(=S)- [nitrogen, aromatic attach]
+-C(=S)- [2 nitrogen attach]
+-C(=S)S- [aliphatic attach]
+-C(=S)S- [aromatic attach]
+-C(=S)S- [nitrogen attach]
+-C(=S)SH [aliphatic attach]
+-C(=S)SH [aromatic attach]
+-C(=S)SH [nitrogen attach]
+-SC(=S)S-
+S=C=S
+-C(=S)OH [aliphatic attach]
+-C(=S)OH [aromatic attach]
+-C(=S)O- [aliphatic attach]
+-C(=S)O- [aromatic attach]
+-C(=S)O- [nitrogen attach]
+-C(=O)SH [aliphatic attach]
+-C(=O)SH [aromatic attach]
+-C(=O)SH [nitrogen attach]
+-C(=O)S- [aliphatic attach]
+-C(=O)S- [aromatic attach]
+-C(=O)S- [nitrogen attach]
+-OC(=S)O-
+-SC(=S)O-
+-SC(=O)S-
+-SC(=O)O-
+>C=NOH
+>C=NO
+-CH=NOH
+-CH=NO
+-N=C=O [aliphatic attach]
+-N=C=O [aromatic attach]
+C=[N+][O-]
+-ONO2
+-N=[N+][O-]
+-NO2 [aliphatic attach]
+-NO2 [aromatic attach]
+-NO2 [nitrogen attach]
+-NO2 [olefinic attach]
+A[N+][O-]
+-NHN=O
+>NN=O
+-N=O [aromatic attach]
+-N(=O)
+-S(=O)- [aliphatic attach]
+-S(=O)- [aromatic attach]
+-S(=O)- [nitrogen, aromatic attach]
+-S(=O)- olefinic attach]
+-S(=O)- [2 nitrogen attach]
+-S(=O)- [nitrogen, aliphatic attach]
+-S(=O)(=O)- [nitrogen, aromatic attach]
+-S(=O)(=O)- [nitrogen, aliphatic attach]
+-S(=O)(=O)- [olefinic attach]
+-S(=O)(=O)- [2 nitrogen attach]
+-S(=O)(=O)- [aromatic attach]
+-S(=O)(=O)- [aliphatic attach]
+P(=O)
+P=N
+P=NH
+P=S
+-CF3 [aliphatic attach]
+-CF3 [aromatic attach]
+-CCl3 [aromatic attach]
+-CCl3 [aliphatic attach]
+Halogen [Nitrogen attach]
+As(=O)
+-N=C=S
+Sn=O
+-N=S=O

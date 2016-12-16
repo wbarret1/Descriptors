@@ -1,0 +1,797 @@
+x0
+x1
+x2
+xp3
+xp4
+xp5
+xp6
+xp7
+xp8
+xp9
+xp10
+xc3
+xc4
+xpc4
+xch3
+xch4
+xch5
+xch6
+xch7
+xch8
+xch9
+xch10
+knotp
+xv0
+xv1
+xv2
+xvp3
+xvp4
+xvp5
+xvp6
+xvp7
+xvp8
+xvp9
+xvp10
+xvc3
+xvc4
+xvpc4
+xvch3
+xvch4
+xvch5
+xvch6
+xvch7
+xvch8
+xvch9
+xvch10
+knotpv
+k1
+k2
+k3
+ka1
+ka2
+ka3
+phia
+SsCH3
+SdCH2
+SssCH2
+StCH
+SdsCH
+SaaCH
+SsssCH
+SddC
+StsC
+SdssC
+SsaaC
+SaaaC
+SssssC
+SsNH2
+SdNH
+SssNH
+SaaNH
+StN
+SdsN
+SaaN
+SsssN
+SaaaN
+SsaaN
+SsNH3p
+SssNH2p
+SsssNHp
+SddNp
+StsNp
+SdNm
+SdssNp
+SssssNp
+SsaaNp
+SsOH
+SdO
+SssO
+SaaO
+SsOm
+SsF
+SsCl
+SsBr
+SsI
+SsSiH3
+SssSiH2
+SsssSiH
+SssssSi
+SsssP
+SdsssP
+SddsP
+SsssssP
+SdssPH
+SsPH2
+SssPH
+SsSH
+SdS
+SssS
+SaaS
+SdssS
+SddssS
+SssssssS
+SsSnH3
+SssSnH2
+SsssSnH
+SssssSn
+SsPbH3
+SssPbH2
+SsssPbH
+SssssPb
+SsssAs
+SdsssAs
+SddsAs
+SsssssAs
+SsAsH2
+SssAsH
+SsHgp
+SssHg
+SsHg
+StCm
+SsCH3_acnt
+SdCH2_acnt
+SssCH2_acnt
+StCH_acnt
+SdsCH_acnt
+SaaCH_acnt
+SsssCH_acnt
+SddC_acnt
+StsC_acnt
+SdssC_acnt
+SsaaC_acnt
+SaaaC_acnt
+SssssC_acnt
+SsNH2_acnt
+SdNH_acnt
+SssNH_acnt
+SaaNH_acnt
+StN_acnt
+SdsN_acnt
+SaaN_acnt
+SsssN_acnt
+SaaaN_acnt
+SsaaN_acnt
+SsNH3p_acnt
+SssNH2p_acnt
+SsssNHp_acnt
+SddNp_acnt
+StsNp_acnt
+SdNm_acnt
+SdssNp_acnt
+SssssNp_acnt
+SsaaNp_acnt
+SsOH_acnt
+SdO_acnt
+SssO_acnt
+SaaO_acnt
+SsOm_acnt
+SsF_acnt
+SsCl_acnt
+SsBr_acnt
+SsI_acnt
+SsSiH3_acnt
+SssSiH2_acnt
+SsssSiH_acnt
+SssssSi_acnt
+SsssP_acnt
+SdsssP_acnt
+SddsP_acnt
+SsssssP_acnt
+SdssPH_acnt
+SsPH2_acnt
+SssPH_acnt
+SsSH_acnt
+SdS_acnt
+SssS_acnt
+SaaS_acnt
+SdssS_acnt
+SddssS_acnt
+SssssssS_acnt
+SsSnH3_acnt
+SssSnH2_acnt
+SsssSnH_acnt
+SssssSn_acnt
+SsPbH3_acnt
+SssPbH2_acnt
+SsssPbH_acnt
+SssssPb_acnt
+SsssAs_acnt
+SdsssAs_acnt
+SddsAs_acnt
+SsssssAs_acnt
+SsAsH2_acnt
+SssAsH_acnt
+SsHgp_acnt
+SssHg_acnt
+SsHg_acnt
+StCm_acnt
+SHsOH
+SHother
+SHdNH
+SHsSH
+SHsNH2
+SHssNH
+SHtCH
+SHCHnX
+Hmax
+Gmax
+Hmin
+Gmin
+Hmaxpos
+Hminneg
+numHBa
+numHBd
+numwHBd
+SHHBa
+SHHBd
+SHwHBd
+Qs
+Qv
+Qsv
+ic
+si
+ib
+I
+maxic
+ssi
+R
+eim
+iadje
+iadjem
+iadjm
+iadjmm
+ivdem
+ivdmm
+ieadje
+ieadjem
+ieadjm
+ieadjmm
+ide
+idem
+idm
+idmm
+iddem
+iddmm
+iede
+iedem
+We
+iedm
+iedmm
+tvc
+icyce
+icycem
+icycm
+icycmm
+tti
+ttvi
+MDEC11
+MDEC12
+MDEC13
+MDEC14
+MDEC22
+MDEC23
+MDEC24
+MDEC33
+MDEC34
+MDEC44
+MDEO11
+MDEO12
+MDEO22
+MDEN11
+MDEN12
+MDEN13
+MDEN22
+MDEN23
+MDEN33
+BEHm1
+BEHm2
+BEHm3
+BEHm4
+BEHm5
+BEHm6
+BEHm7
+BEHm8
+BELm1
+BELm2
+BELm3
+BELm4
+BELm5
+BELm6
+BELm7
+BELm8
+BEHv1
+BEHv2
+BEHv3
+BEHv4
+BEHv5
+BEHv6
+BEHv7
+BEHv8
+BELv1
+BELv2
+BELv3
+BELv4
+BELv5
+BELv6
+BELv7
+BELv8
+BEHe1
+BEHe2
+BEHe3
+BEHe4
+BEHe5
+BEHe6
+BEHe7
+BEHe8
+BELe1
+BELe2
+BELe3
+BELe4
+BELe5
+BELe6
+BELe7
+BELe8
+BEHp1
+BEHp2
+BEHp3
+BEHp4
+BEHp5
+BEHp6
+BEHp7
+BEHp8
+BELp1
+BELp2
+BELp3
+BELp4
+BELp5
+BELp6
+BELp7
+BELp8
+ZM1
+ZM1V
+ZM2
+ZM2V
+J
+Jt
+BAC
+Lop
+ICR
+TIE
+MAXDN
+MAXDP
+DELS
+W
+WA
+MW
+AMW
+Sv
+Se
+Sp
+Ss
+Mv
+Me
+Mp
+Ms
+nAT
+nSK
+nBT
+nBO
+nBM
+SCBO
+ARR
+nCIC
+nCIR
+nDB
+nTB
+nAB
+nH
+nC
+nN
+nO
+nP
+nS
+nF
+nCL
+nBR
+nI
+nB
+nX
+nR03
+nR04
+nR05
+nR06
+nR07
+nR08
+nR09
+nR10
+nR11
+nR12
+nBnz
+ATS1m
+ATS2m
+ATS3m
+ATS4m
+ATS5m
+ATS6m
+ATS7m
+ATS8m
+ATS1v
+ATS2v
+ATS3v
+ATS4v
+ATS5v
+ATS6v
+ATS7v
+ATS8v
+ATS1e
+ATS2e
+ATS3e
+ATS4e
+ATS5e
+ATS6e
+ATS7e
+ATS8e
+ATS1p
+ATS2p
+ATS3p
+ATS4p
+ATS5p
+ATS6p
+ATS7p
+ATS8p
+MATS1m
+MATS2m
+MATS3m
+MATS4m
+MATS5m
+MATS6m
+MATS7m
+MATS8m
+MATS1v
+MATS2v
+MATS3v
+MATS4v
+MATS5v
+MATS6v
+MATS7v
+MATS8v
+MATS1e
+MATS2e
+MATS3e
+MATS4e
+MATS5e
+MATS6e
+MATS7e
+MATS8e
+MATS1p
+MATS2p
+MATS3p
+MATS4p
+MATS5p
+MATS6p
+MATS7p
+MATS8p
+GATS1m
+GATS2m
+GATS3m
+GATS4m
+GATS5m
+GATS6m
+GATS7m
+GATS8m
+GATS1v
+GATS2v
+GATS3v
+GATS4v
+GATS5v
+GATS6v
+GATS7v
+GATS8v
+GATS1e
+GATS2e
+GATS3e
+GATS4e
+GATS5e
+GATS6e
+GATS7e
+GATS8e
+GATS1p
+GATS2p
+GATS3p
+GATS4p
+GATS5p
+GATS6p
+GATS7p
+GATS8p
+MWC01
+MWC02
+MWC03
+MWC04
+MWC05
+MWC06
+MWC07
+MWC08
+MWC09
+MWC10
+SRW01
+SRW02
+SRW03
+SRW04
+SRW05
+SRW06
+SRW07
+SRW08
+SRW09
+SRW10
+MPC01
+MPC02
+MPC03
+MPC04
+MPC05
+MPC06
+MPC07
+MPC08
+MPC09
+MPC10
+piPC01
+piPC02
+piPC03
+piPC04
+piPC05
+piPC06
+piPC07
+piPC08
+piPC09
+piPC10
+piID
+TWC
+TPC
+CID
+CID2
+BID
+XLOGP
+XLOGP2
+ALOGP
+ALOGP2
+AMR
+Hy
+Ui
+As [+5 valence, one double bond]
+As [+5 valence, all single bonds]
+As [+5 valence, two double bonds]
+As [+3 valence, one double bond]
+As [+3 valence, all single bonds]
+As
+B
+-Br [aliphatic attach]
+-Br [aromatic attach]
+-Br [olefinic attach]
+-CH3 [aliphatic attach]
+-CH3 [aromatic attach]
+-CH2- [aliphatic attach]
+-CH2- [aromatic attach]
+-CH< [aliphatic attach]
+-CH< [aromatic attach]
+>C< [aliphatic attach]
+>C< [aromatic attach]
+=CH2 [aliphatic attach]
+-CH= [aromatic attach]
+=CH [aliphatic attach]
+=C [aliphatic attach]
+>C= [aromatic attach]
+#C [aliphatic attach]
+-C# [aromatic attach]
+#CH [aliphatic attach]
+=C=
+ACH
+AC
+Fused aromatic carbon
+ACAC
+-Cl [aliphatic attach]
+-Cl [aromatic attach]
+-Cl [olefinic attach]
+-F [aliphatic attach]
+-F [aromatic attach]
+-F [olefinic attach]
+H [carbon attach]
+H [phosphorus attach]
+H [nitrogen attach]
+H [silicon attach]
+H [other]
+-I [aliphatic attach]
+-I [aromatic attach]
+-I [olefinic attach]
+Pb
+-Hg
+-Hg-
+-Hg+
+Hg
+-O- [nitrogen attach]
+-O- [phosphorus attach]
+-O- [arsenic attach]
+-O- [aromatic attach]
+-O- [oxygen attach]
+-O- [sulfur attach]
+-O- (epoxide)
+-O- [2 aromatic attach]
+-O- [phosphorus, aromatic attach]
+-O- [2 phosphorus attach]
+-O- [aliphatic attach]
+=O [other]
+-OH [phosphorus attach]
+-OH [sulfur attach]
+-OH [arsenic attach]
+-OH [aliphatic attach]
+-OH [nitrogen attach]
+-OH [oxygen attach]
+-OH [aromatic attach]
+AO
+-[O-]
+-NH2 [aliphatic attach]
+-NH2 [aromatic attach]
+-NH2 [nitrogen attach]
+-NH2 [attached to P]
+-NH- [aliphatic attach]
+-NH- [aromatic attach]
+-NH- [3 membered ring]
+-NH- [attached to P]
+-NH- [nitrogen attach]
+-N< [aliphatic attach]
+-N< [aromatic attach]
+-N< [nitrogen attach]
+-N< [attached to P]
+-N< [3 membered ring]
+N+ [four single bonds]
+AN+
+AN
+ANH
+ANH [attached to AN in same ring]
+AN [attached to AN in same ring]
+Fused aromatic nitrogen
+-[N+]#N
+-N=[N+]=[N-]
+-N=NH
+-N=N-
+P [+5 valence, two double bonds]
+P [+5 valence, one double bond]
+P [+5 valence, all single bonds]
+P [+3 valence, all single bonds]
+P
+-SH [aliphatic attach]
+-SH [aromatic attach]
+-S- [aromatic attach]
+-S- [three membered ring]
+-S- [2 aromatic attach]
+-S- [nitrogen attach]
+-S- [sulfur attach]
+-S- [aliphatic attach]
+-S- [arsenic attach]
+-S- [phosphorus attach]
+=S [other]
+->S<-
+AS
+Si [aromatic attach]
+Si [oxygen, aromatic attach]
+Si [oxygen attach]
+Si
+Sn [oxygen attach]
+Sn [aromatic attach]
+Sn
+-C#N [aliphatic attach]
+-C#N [aromatic attach]
+-C#N [olefinic attach]
+CH2=N
+-CH=NH
+-CH=N
+>C=NH
+>C=N
+>C(=N) [Nitrogen attach]
+[C-]#[N+]
+C=[N+]=[N-]
+>C(=N) [2 Nitrogen attach]
+-C([H])=N [Nitrogen attach]
+-C([H])=N[H] [Nitrogen attach]
+>C=N[H] [2 Nitrogen attach]
+>C=N[H] [Nitrogen attach]
+N=C=N
+HN=C=N
+-C#N [aliphatic sulfur attach]
+-C#N [aliphatic nitrogen attach]
+C=O(ketone, aliphatic attach)
+-C(=O)- [aromatic attach]
+-C(=O)- [phosphorus attach]
+-C(=O)- [halogen attach]
+-C(=O)- [2 nitrogen attach]
+-C(=O)- [nitrogen, aliphatic attach]
+-C(=O)- [olefinic attach]
+-C(=O)- [nitrogen, aromatic attach]
+-C(=O)- [2 aromatic attach]
+C=O(non-ketone, aliphatic attach)
+-COOH [aliphatic attach]
+-COOH [aromatic attach]
+-CHO [aliphatic attach]
+-CHO [aromatic attach]
+-CHO [nitrogen attach]
+-C(=O)O- [olefinic attach]
+-C(=O)O- [aromatic attach]
+-C(=O)O- [aliphatic attach]
+-C(=O)O- [nitrogen attach]
+-C(=O)O- [cyclic]
+HC(=O)O-
+-C(=O)OC(=O)-
+-C(=O)[O-]
+-OC(=O)O-
+C=C=O
+CH2=C(CH3)C(=O)O-
+CH2=CHC(=O)O-
+-C(=S)- [aliphatic attach]
+-C(=S)- [aromatic attach]
+-C(=S)- [nitrogen, aliphatic attach]
+-C(=S)- [nitrogen, aromatic attach]
+-C(=S)- [2 nitrogen attach]
+-C(=S)S- [aliphatic attach]
+-C(=S)S- [aromatic attach]
+-C(=S)S- [nitrogen attach]
+-C(=S)SH [aliphatic attach]
+-C(=S)SH [aromatic attach]
+-C(=S)SH [nitrogen attach]
+-SC(=S)S-
+S=C=S
+-C(=S)OH [aliphatic attach]
+-C(=S)OH [aromatic attach]
+-C(=S)O- [aliphatic attach]
+-C(=S)O- [aromatic attach]
+-C(=S)O- [nitrogen attach]
+-C(=O)SH [aliphatic attach]
+-C(=O)SH [aromatic attach]
+-C(=O)SH [nitrogen attach]
+-C(=O)S- [aliphatic attach]
+-C(=O)S- [aromatic attach]
+-C(=O)S- [nitrogen attach]
+-OC(=S)O-
+-SC(=S)O-
+-SC(=O)S-
+-SC(=O)O-
+>C=NOH
+>C=NO
+-CH=NOH
+-CH=NO
+-N=C=O [aliphatic attach]
+-N=C=O [aromatic attach]
+C=[N+][O-]
+-ONO2
+-N=[N+][O-]
+-NO2 [aliphatic attach]
+-NO2 [aromatic attach]
+-NO2 [nitrogen attach]
+-NO2 [olefinic attach]
+A[N+][O-]
+-NHN=O
+>NN=O
+-N=O [aromatic attach]
+-N(=O)
+-S(=O)- [aliphatic attach]
+-S(=O)- [aromatic attach]
+-S(=O)- [nitrogen, aromatic attach]
+-S(=O)- olefinic attach]
+-S(=O)- [2 nitrogen attach]
+-S(=O)- [nitrogen, aliphatic attach]
+-S(=O)(=O)- [nitrogen, aromatic attach]
+-S(=O)(=O)- [nitrogen, aliphatic attach]
+-S(=O)(=O)- [olefinic attach]
+-S(=O)(=O)- [2 nitrogen attach]
+-S(=O)(=O)- [aromatic attach]
+-S(=O)(=O)- [aliphatic attach]
+P(=O)
+P=N
+P=NH
+P=S
+-CF3 [aliphatic attach]
+-CF3 [aromatic attach]
+-CCl3 [aromatic attach]
+-CCl3 [aliphatic attach]
+Halogen [Nitrogen attach]
+As(=O)
+-N=C=S
+Sn=O
+-N=S=O
