@@ -18,11 +18,10 @@ namespace Descriptors
     class Atom
     {
         List<Atom> bondedAtoms;
-        List<int> connections;
+
         public Atom()
         {
             bondedAtoms = new List<Atom>();
-            connections = new List<int>();
         }
 
         public double x { get; set; } = 0.0;
@@ -45,11 +44,6 @@ namespace Descriptors
         public void AddBond(Atom atom)
         {
             this.bondedAtoms.Add(atom);
-        }
-
-        public void AddConnection(int atom)
-        {
-            this.connections.Add(atom);
         }
 
         public Atom[] BondedAtoms

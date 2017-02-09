@@ -30,6 +30,17 @@ namespace Descriptors
             return retVal.ToArray<Atom>();
         }
 
+        static public String[] Elements(Molecule m)
+        {
+            List<string> retVal = new List<string>();
+            Atom[] atoms = m.GetAtoms();
+            foreach (Atom a in atoms)
+            {
+                if (!retVal.Contains(a.element)) retVal.Add(a.element);
+            }
+            return retVal.ToArray();
+        }
+
         static public Atom[] FindElement(Molecule m, String element)
         {
             List<Atom> retVal = new List<Atom>();

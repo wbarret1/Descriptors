@@ -56,6 +56,7 @@ namespace Descriptors
         public BondReactingCenterStatus reactingCenter;
     }
 
+    //functional group based upon Kidus' fragments from TEST.
     public struct group
     {
         public string name;
@@ -82,41 +83,41 @@ namespace Descriptors
             return this.atoms.ToArray<Atom>();
         }
 
-        Atom[] findElement(string elementToFind)
-        {
-            List<Atom> retVal = new List<Atom>();
-            foreach (Atom a in atoms)
-            {
-                if (a.element == elementToFind)
-                {
-                    retVal.Add(a);
-                }
-            }
-            return retVal.ToArray();
-        }
+        //Atom[] findElement(string elementToFind)
+        //{
+        //    List<Atom> retVal = new List<Atom>();
+        //    foreach (Atom a in atoms)
+        //    {
+        //        if (a.element == elementToFind)
+        //        {
+        //            retVal.Add(a);
+        //        }
+        //    }
+        //    return retVal.ToArray();
+        //}
 
-        int[] FindElementIndices(string elementToFind)
-        {
-            List<int> retVal = new List<int>();
-            foreach (Atom a in atoms)
-            {
-                if (a.element == elementToFind)
-                {
-                    retVal.Add(atoms.IndexOf(a));
-                }
-            }
-            return retVal.ToArray();
-        }
+        //int[] FindElementIndices(string elementToFind)
+        //{
+        //    List<int> retVal = new List<int>();
+        //    foreach (Atom a in atoms)
+        //    {
+        //        if (a.element == elementToFind)
+        //        {
+        //            retVal.Add(atoms.IndexOf(a));
+        //        }
+        //    }
+        //    return retVal.ToArray();
+        //}
 
-        public String[] Elements()
-        {
-            List<string> retVal = new List<string>();
-            foreach (Atom a in atoms)
-            {
-                if (!retVal.Contains(a.element)) retVal.Add(a.element);
-            }
-            return retVal.ToArray();
-        }
+        //public String[] Elements()
+        //{
+        //    List<string> retVal = new List<string>();
+        //    foreach (Atom a in atoms)
+        //    {
+        //        if (!retVal.Contains(a.element)) retVal.Add(a.element);
+        //    }
+        //    return retVal.ToArray();
+        //}
 
         public void AddAtom(Atom a)
         {
@@ -138,25 +139,6 @@ namespace Descriptors
             ringsFound = false;
         }
 
-        //public int[][] GetDFS()
-        //{
-        //    this.FindRings();
-        //    Stack<int> myStack = new Stack<int>();
-        //    foreach (IGraphObject a in atoms)
-        //    {
-        //        a.visited = false;
-        //        a.finished = false;
-        //    }
-        //    cycles = new List<List<int>>();
-        //    for (int i = 0; i < atoms.Count; i++)
-        //    {
-        //        search(i, i, myStack, cycles);
-        //    }
-        //    cyclesFound = true;
-        //    this.ExtractRings();
-        //    return convertToArrayArray(cycles);
-        //}
-
         public Atom[][] FindRings()
         {
             if (!ringsFound)
@@ -175,37 +157,6 @@ namespace Descriptors
             }
             return this.convertToArrayArray(cycles);
         }
-
-        //void search(int current, int parent, Stack<int> stack, List<List<int>> cycles)
-        //{
-        //    stack.Push(current + 1);
-        //    for (int i = 0; i < ((IGraphObject)atoms[current]).connections().Length; i++)
-        //    {
-        //        int next = ((IGraphObject)atoms[current]).connections()[i] + 1;
-        //        if (next != parent + 1)
-        //        {
-        //            if (stack.Contains(next))
-        //            {
-        //                List<int> cycle = new List<int>();
-        //                foreach (int a in stack)
-        //                {
-        //                    cycle.Add(a);
-        //                    if (a == next) break;
-        //                }
-        //                cycles.Add(cycle);
-        //                stack.Pop();
-        //                return;
-        //            }
-        //            else if (!((IGraphObject)atoms[next - 1]).finished)
-        //            {
-        //                //((IGraphObject)atoms[current]).visited = true;
-        //                search(next - 1, current, stack, cycles);
-        //            }
-        //        }
-        //    }
-        //    if (stack.Count != 0) stack.Pop();
-        //    ((IGraphObject)atoms[current]).finished = true;
-        //}
 
         void search(Atom current, Atom parent, bool[] f, Stack<Atom> stack, List<List<Atom>> cycles)
         {
@@ -387,88 +338,9 @@ namespace Descriptors
             }
         }
 
-        //List<List<int>> convertToInts(List<List<Atom>> lists)
-        //{
-        //    List<List<int>> retVal = new List<List<int>>();
-        //    foreach (List<Atom> list in lists)
-        //    {
-        //        List<int> intList = new List<int>();
-        //        foreach (Atom a in list)
-        //        {
-        //            intList.Add(atoms.IndexOf(a) + 1);
-        //        }
-        //        retVal.Add(intList);
-        //    }
-        //    return retVal;
-        //}
-
-        //int[][] FusedRings()
-        //{
-        //    if (!cyclesFound) this.GetDFS();
-        //    for (int i = 0; i < cycles.Count; i++)
-        //    {
-        //        for (int j = i + 1; j < cycles.Count; j++)
-        //        {
-        //            List<int> matches = new List<int>();
-        //            foreach (int val in cycles[j])
-        //            {
-        //                int location = cycles[i].IndexOf(val);
-        //                if (location >= 0) matches.Add(val);
-        //            }
-        //        }
-        //    }
-        //    return null;// convertToIntArrayArray(rings);
-        //}
-
         int CompareListsByLength<T>(List<T> list1, List<T> list2)
         {
             return list1.Count - list2.Count;
-        }
-
-        Atom[][] HeteroCyclic()
-        {
-            if (!ringsFound) this.FindRings();
-            List<List<Atom>> retVal = new List<List<Atom>>();
-            foreach (List<Atom> cycle in cycles)
-            {
-                foreach (Atom i in cycle)
-                {
-                    if (i.element != "C")
-                    {
-                        retVal.Add(cycle);
-                        break;
-                    }
-                }
-            }
-            return convertToArrayArray(retVal);
-        }
-
-        Atom[][] HeteroCyclic(string element)
-        {
-            if (!ringsFound) this.FindRings();
-            List<List<Atom>> retVal = new List<List<Atom>>();
-            foreach (List<Atom> cycle in cycles)
-            {
-                foreach (Atom i in cycle)
-                {
-                    if (i.element == element)
-                    {
-                        retVal.Add(cycle);
-                        break;
-                    }
-                }
-            }
-            return convertToArrayArray(retVal);
-        }
-
-        Atom[] BranchAtomIndices()
-        {
-            List<Atom> retVal = new List<Atom>();
-            foreach (Atom a in atoms)
-            {
-                if (a.BondedAtoms.Length > 2) retVal.Add(a);
-            }
-            return retVal.ToArray();
         }
     }
 }

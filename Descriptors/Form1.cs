@@ -104,7 +104,7 @@ namespace Descriptors
                 this.ImportMolFile(filename);
             }
             string[] groups = this.TestGroups(nonZeroFragments);
-            string[] elements = molecule.Elements();
+            string[] elements = Functionalities.Elements(molecule); 
             Atom[][] rings = molecule.FindRings();
             Atom[] phosphates = Functionalities.findPhosphate(molecule);
             Atom[] chlorides = Functionalities.FindChloride(molecule);
