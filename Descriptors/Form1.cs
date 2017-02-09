@@ -30,8 +30,6 @@ namespace Descriptors
         List<descriptor> nonZeroFragments;
         List<Fragment> assignedFragments;
         List<group> functionalGroups;
-        //List<Atom> atoms;
-        //List<Bond> bonds;
         Molecule molecule;
         System.Data.DataTable atomTable;
         System.Data.DataTable bondTable;
@@ -105,17 +103,17 @@ namespace Descriptors
             {
                 this.ImportMolFile(filename);
             }
-            this.TestGroups(nonZeroFragments);
+            string[] groups = this.TestGroups(nonZeroFragments);
             string[] elements = molecule.Elements();
+            Atom[][] rings = molecule.FindRings();
             Atom[] phosphates = Functionalities.findPhosphate(molecule);
-            int[] chlorides = Functionalities.findChloride(molecule);
-            int[] bromides = Functionalities.findBromide(molecule);
-            int[][] rings = molecule.FindRings();
-            Atom[][] hetero = molecule.HeteroCyclic();
-            Atom[][] thio = molecule.HeteroCyclic("S");
-            Atom[][] oxy = molecule.HeteroCyclic("O");
-            Atom[][] nitro = molecule.HeteroCyclic("N");
-            int[] branchAtoms = molecule.BranchAtomIndices();
+            Atom[] chlorides = Functionalities.FindChloride(molecule);
+            Atom[] bromides = Functionalities.FindBromide(molecule);
+            Atom[][] hetero = Functionalities.HeteroCyclic(molecule);
+            Atom[][] thio = Functionalities.HeteroCyclic(molecule, "S");
+            Atom[][] furan = Functionalities.HeteroCyclic(molecule, "O");
+            Atom[][] azo = Functionalities.HeteroCyclic(molecule, "N");
+            Atom[] branchAtoms = Functionalities.BranchAtoms(molecule);
             string[] phosphs = Functionalities.PhosphorousFunctionality(molecule);
             //Form2 form = new Descriptors.Form2(nonZeroFragments);
             //form.Show();
@@ -123,7 +121,6 @@ namespace Descriptors
 
         string[] TestGroups(List<descriptor> fragments)
         {
-            //List<string> groups = new List<string>();
             List<group> groups = new List<group>();
             groups.AddRange(functionalGroups);
             for (int i = 0; i < 5; i++)
@@ -149,7 +146,12 @@ namespace Descriptors
                     else groups.Remove(g);
                 }
             }
-            return null; //groups.ToArray<string>();
+            List<string> retVal = new List<string>();
+            foreach (group g in groups)
+            {
+                retVal.Add(g.name);
+            }
+            return retVal.ToArray<string>();
         }
 
         void CreateDataTables()

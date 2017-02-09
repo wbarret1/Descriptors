@@ -30,46 +30,90 @@ namespace Descriptors
             return retVal.ToArray<Atom>();
         }
 
-        static public int[] findChloride(Molecule m)
+        static public Atom[] FindElement(Molecule m, String element)
         {
-            return m.FindElementIndices("Cl");
+            List<Atom> retVal = new List<Atom>();
+            Atom[] atoms = m.GetAtoms();
+            foreach (Atom a in atoms)
+            {
+                if (a.element == element)
+                {
+                    retVal.Add(a);                    
+                }
+            }
+            return retVal.ToArray<Atom>();
         }
 
-        static public int[] findBromide(Molecule m)
+        static public Atom[] FindChloride(Molecule m)
         {
-            return m.FindElementIndices("Br");
+            return FindElement(m, "Cl");
         }
 
-        //static public int[][] HeteroCyclic(Molecule m, string element)
-        //{
-        //    if (!cyclesFound) this.GetDFS();
-        //    List<List<int>> retVal = new List<List<int>>();
-        //    foreach (List<int> cycle in cycles)
-        //    {
-        //        foreach (int i in cycle)
-        //        {
-        //            if (atoms[i - 1].element == element)
-        //            {
-        //                retVal.Add(cycle);
-        //                break;
-        //            }
-        //        }
-        //    }
-        //    return convertToIntArrayArray(retVal);
-        //}
+        static public Atom[] FindBromide(Molecule m)
+        {
+            return FindElement(m, "Br");
+        }
+
+        static public Atom[] BranchAtoms(Molecule m)
+        {
+            List<Atom> retVal = new List<Atom>();
+            foreach (Atom a in m.GetAtoms())
+            {
+                if (a.BondedAtoms.Length > 2) retVal.Add(a);
+            }
+            return retVal.ToArray();
+        }
+
+        static public Atom[][] HeteroCyclic(Molecule m, string element)
+        {
+            //if (!cyclesFound) this.GetDFS();
+            Atom[][] rings = m.FindRings();
+            List<Atom[]> retVal = new List<Atom[]>();
+            foreach (Atom[] atoms in rings)
+            {
+                foreach (Atom a in atoms)
+                {
+                    if (a.element == element)
+                    {
+                        retVal.Add(atoms);
+                        break;
+                    }
+                }
+            }
+            return retVal.ToArray();
+        }
+
+        static public Atom[][] HeteroCyclic(Molecule m)
+        {
+            //if (!cyclesFound) this.GetDFS();
+            Atom[][] rings = m.FindRings();
+            List<Atom[]> retVal = new List<Atom[]>();
+            foreach (Atom[] atoms in rings)
+            {
+                foreach (Atom a in atoms)
+                {
+                    if (a.element != "C")
+                    {
+                        retVal.Add(atoms);
+                        break;
+                    }
+                }
+            }
+            return retVal.ToArray();
+        }
 
         static public string[] PhosphorousFunctionality(Molecule m)
         {
             List<string> retVal = new List<string>();
 
             // Get the P atons.
-            Atom[] p = m.findElement("P");
+            Atom[] p = FindElement(m, "P");
 
             // If there aren't any, returnn an array with zero elements.
             if (p.Length == 0) return retVal.ToArray<string>();
 
             // Look for a heterocyclic containing P
-            Atom[][] pHeteorRings = m.HeteroCyclic("P");
+            Atom[][] pHeteorRings = HeteroCyclic(m, "P");
             if (pHeteorRings.Length != 0)
             {
                 // If there is one, add the 'phosphorine' functionality.

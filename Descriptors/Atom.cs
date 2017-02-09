@@ -15,15 +15,7 @@ namespace Descriptors
 
     };
 
-    interface IGraphObject
-    {
-        int[] connections();
-        bool visited { get; set; }
-        bool finished { get; set; }
-    }
-
-    class Atom:
-        IGraphObject
+    class Atom
     {
         List<Atom> bondedAtoms;
         List<int> connections;
@@ -33,12 +25,6 @@ namespace Descriptors
             connections = new List<int>();
         }
 
-        int[] IGraphObject.connections()
-        {
-            return connections.ToArray<int>();
-        }
-        bool IGraphObject.visited { get; set; } = false;
-        bool IGraphObject.finished { get; set; } = false;
         public double x { get; set; } = 0.0;
         public double y { get; set; } = 0.0;
         public double z { get; set; } = 0.0;
