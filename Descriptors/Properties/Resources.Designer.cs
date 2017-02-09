@@ -61,6 +61,29 @@ namespace Descriptors.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 		Count	Fragment	Count	Fragment	Count	Fragment	Count	Fragment	Count	Fragment		
+        ///													
+        ///ACETALS		4	CH3  AA	2	O    AA	1	&gt;C&lt;    AA						
+        ///													
+        ///ACYLALS (DIESTERS) 													
+        ///													
+        ///ACYLOINS		2	CH3  AA	1	CH   AA	1	OH    AA	1	C=O   AA				
+        ///													
+        ///ALCOHOLS		1	CH3  AA	1	OH    AA								
+        ///													
+        ///&quot;ALCOHOLS, ALLYLIC&quot;		1	CH2  AA	1	OH    AA	1	C=CH  AA	1	C=CH2  AA				
+        ///													
+        /// ALDEHYDES		1	R        AA	1	CH2   AA								
+        ///													
+        ///ALKANES		2	CH3     AA										        /// [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Copy_of_Full_Functional_Group_List {
+            get {
+                return ResourceManager.GetString("Copy_of_Full_Functional_Group_List", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to x0
         ///x1
         ///x2

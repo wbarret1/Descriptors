@@ -1,0 +1,85 @@
+	Structure	Count	Fragment	Test Frag	Count	Fragment	Test Frag	Count	Fragment	Test Frag	Count	Fragment	Test Frag	Count	Fragment	Test Frag	Count	Fragment	Test Frag
+Alkanes		2	CH3     AA	-CH3 [aliphatic attach]															
+Alkenes		2	CH2     AA	-CH2- [aliphatic attach]															
+Alkynes		2	CH3     AA	-CH3 [aliphatic attach]															
+Alkyl Halide		1	CH3     AA	-CH3 [aliphatic attach]	1	Cl       AA	-Cl [aliphatic attach]												
+Aromatic		6	ArCH	AC															
+Arenes		8	ArCH	AC	2	Fused Ar Carbon	Fused aromatic carbon												
+Toluene		1	CH3     ArA	-CF3 [aromatic attach]	1	ArC	AC	5	ArCH	ACH									
+Diene		2	CH       AA	-CH< [aliphatic attach]	2	CH2     AA	-CH2- [aliphatic attach]												
+Haloalkane		5	CH2     AA	-CH2- [aliphatic attach]	2	CH3    AA	-CH3 [aliphatic attach]	1	CH      AA	-CH< [aliphatic attach]	1	X           AA		1	>C<       AA	>C< [aliphatic attach]			
+Cyclo Alkane		6	CH2     AA	-CH2- [aliphatic attach]															
+Pyridine		5	CH     AA	-CH< [aliphatic attach]	1	N       AA	-N< [aliphatic attach]												
+Azo		2	CH3     AA	-CH3 [aliphatic attach]	1	N=N	-N=N-												
+Alkaloids		3	CH2     AA	-CH2- [aliphatic attach]	1	CH    ArA	-CH< [aromatic attach]	1	NH       AA	-NH- [aliphatic attach]	1	AC	AC	4	ACH	AC	1	AN	AN
+Imidzole		3	ACH     AA	AC	1	AN	AN	1	ANH  	ANH									
+Azide		1	N=[N+]=N-	-N=[N+]=[N-]	2	H       NA	H [nitrogen attach]												
+Hydrazine		2	NH2    NA	-NH2 [nitrogen attach]															
+Amides		3	CH3     AA	-CH3 [aliphatic attach]	1	>C=N	>C=N												
+Amines		1	R          AA		1	NH     AA	-NH- [aliphatic attach]												
+Sulfenamide		3	R        AA		1	N<    AA	-N< [aliphatic attach]	1	S           NA	-S- [nitrogen attach]									
+Alcohol		1	R        AA		1	OH   AA	-OH [aliphatic attach]												
+Ether		2	R        AA		1	O      AA	-O- [aliphatic attach]												
+Ketone		2	R        AA		1	C=O  Ketone  AA	"C=O(ketone, aliphatic attach)"												
+Aldehyde		1	R        AA		1	CH2   AA	-CH2- [aliphatic attach]												
+Chroman		2	CH2   AA	-CH2- [aliphatic attach]	1	CH2   ArA	-CH2- [aromatic attach]	1	O        ArA	-O- [aromatic attach]	2	ArC	AC	4	ArCH	ACH			
+Methoxy		1	R        AA		1	CH3   AA	-CH3 [aliphatic attach]	1	O        AA	-O- [aliphatic attach]									
+Carboxyl		1	R        AA		1	COOH   AA	-COOH [aliphatic attach]												
+Phenol		1	OH    ArA	-OH [aromatic attach]	1	ArC	AC	5	ArCH	ACH									
+Pyran		5	CH2   AA	-CH2- [aliphatic attach]	1	O      AA	-O- [aliphatic attach]												
+Epoxide		2	CH2   AA	-CH2- [aliphatic attach]	1	O      epoxide	-O- (epoxide)												
+Acetal		4	R        AA		2	O       AA	-O- [aliphatic attach]	1	>C<        AA	>C< [aliphatic attach]									
+Orthocarbonic		4	OH    AA	-OH [aliphatic attach]	1	>C<    AA	>C< [aliphatic attach]												
+Hydrofuran		4	CH2   AA	-CH2- [aliphatic attach]	1	O       AA	-O- [aliphatic attach]												
+Dicarboxyl																			
+Ester		1	C(=O)O     AA	-C(=O)O- [aliphatic attach]	2	R        AA													
+Anhydride		1	C(=O)OC(=O)	-C(=O)OC(=O)-	2	R        AA													
+Peroxide		2	R        AA		2	O       OA	-O- [oxygen attach]												
+Ketene		2	R        AA		1	C=C=O	C=C=O												
+Furan		4	ArCH	-CH< [aromatic attach]	1	Aro													
+Carbonate		1	OC(=O)O	-OC(=O)O-															
+Orthoester		2	R        AA		1	CH       AA	-CH< [aliphatic attach]	1	O        AA	-O- [aliphatic attach]	1	OH      AA	-OH [aliphatic attach]						
+Amides		1	C(=O)      nitrogenAA	"-C(=O)- [nitrogen, aliphatic attach]"	3	R      AA		1	N<         AA	-N< [aliphatic attach]									
+Semicarbazid		1	C(=O)      2 nitrogenAA	-C(=O)- [2 nitrogen attach]	1	NH   NA	-NH- [nitrogen attach]	1	NH2      AA	-NH2 [aliphatic attach]	1	NH2      NA	-NH2 [nitrogen attach]						
+Imide		2	C(=O)      nitrogenAA	"-C(=O)- [nitrogen, aliphatic attach]"	2	R      AA		1	N<         AA	-N< [aliphatic attach]	1	CH3      AA	-CH3 [aliphatic attach]						
+Amino Acid		1	R        AA		1	CH<  AA	-CH< [aliphatic attach]	1	NH2      AA	-NO2 [aliphatic attach]	1	OH       AA	-OH [aliphatic attach]	1	C=O   AA	"C=O(non-ketone, aliphatic attach)"	1	C=CH2       AA	
+Azole		3	ArCN	-C#N [aromatic attach]	1	ArN	AN	1	ArO	AO									
+Oxime		2	CH3   AA	-CH3 [aliphatic attach]	1	>C=NOH	>C=NOH												
+Nitrate		1	ONO2	-ONO2															
+Isoxazole		3	ArCN	-C#N [aromatic attach]	1	ArN	AN	1	ArO	AO									
+hydroxylamine		1	NH2    AA	-NH2 [aliphatic attach]	1	OH    NA	-OH [nitrogen attach]												
+Cyanates		1	N=C=O   AA	-N=C=O [aliphatic attach]	1	H      NA	H [nitrogen attach]												
+Nitro		1	R        AA		1	N(=O)	-N(=O)	1	O       NA	-O- [nitrogen attach]									
+Nitrite		1	[O-]	-[O-]	1	C=O   OTHER	"C=O(non-ketone, aliphatic attach)"												
+Nitroso		1	CH3   AA	-CH3 [aliphatic attach]	1	N(=O)	-N(=O)												
+Peroxide		2	OH    OA	-OH [oxygen attach]															
+Sulfate		1	OH    SA	-OH [sulfur attach]	1	S(=O)(=O)     AA	-S(=O)(=O)- [aliphatic attach]	1	[O-]	-[O-]									
+Sulfones		2	R       AA		1	S(=O)(=O)     AA	-S(=O)(=O)- [aliphatic attach]												
+Sulfonate Ester		1	R       AA		1	S(=O)(=O)     AA	-S(=O)(=O)- [aliphatic attach]	1	O										
+Sulfoxide		2	R       AA		1	S(=O)             AA	-S(=O)- [aliphatic attach]												
+Phosphorane		5	R        AA		1	P [+5 valence e All single]	"P [+5 valence, all single bonds]"												
+Phosphorine		5	ArCH	-CH< [aromatic attach]	1	P	P												
+Phosphazene		2	R                  AA		1	P=N	P=N												
+Phosphonium		4	CH2              AA	-CH2- [aliphatic attach]	4	OH                  AA	-OH [aliphatic attach]	1	P	P									
+Phospate		3	[O-]	-O- [phosphorus attach]	1	P(=O)	P(=O)												
+Phospate		3	[O-]	-O- [phosphorus, aromatic attach]	1	P(=O)	P(=O)												
+Phosphinite		1	CH3               AA	-CH3 [aliphatic attach]	1	OH                  PA	-OH [phosphorus attach]	2	ArC	AC	1	ArH		1	P [+3 valence e all single] 	"P [+3 valence, all single bonds]"			
+Acyl Phosphate		1	C(=O) O-	-C(=O)- [phosphorus attach]	1	CH3                 AA	-CH3 [aliphatic attach]	1	[O-]	-[O-]	1	(=O)		1	P(=O)	P(=O)			
+Phosphite		3	[O-]	-[O-]	1	P[=3 valence e all single]	"P [+3 valence, all single bonds]"												
+Phosphodiester		2	R                  AA		2	O                       PA	-O- [phosphorus attach]	1	[O-]	-[O-]	1	P(=O)	P(=O)						
+Phosphoric		3	OH               PA	-OH [phosphorus attach]	1	P(=O)	P(=O)												
+Hypophosphorous		1	OH               AA	-OH [aliphatic attach]	1	P(=O)	P(=O)												
+Diphosphene		2	R                   AA		2	P	P												
+Phosphine		1	P	P															
+Phosphide		1	X                   AA		2	H                              PH	H [phosphorus attach]	1	P [+3 valence e all single] 	"P [+3 valence, all single bonds]"									
+Thial		1	C(=S)-                  AA	-C(=S)- [aliphatic attach]	1	R                              AA		1	H                            CA	H [carbon attach]									
+Sulfonium		3	CH3                   AA	-CH3 [aliphatic attach]															
+Thione		2	R                        AA		1	C(=S)                        AA	-C(=S)- [aliphatic attach]												
+Thiols		1	R                        AA		1	SH                             AA	-SH [aliphatic attach]												
+Sulfide																			
+Thiazole		3	ArCH	ACH	1	ArN	AN	1	ArS	AS									
+Thiocyanate		1	C#N            alphaticSA	-C#N [aliphatic sulfur attach]	1	S                                AA	-S- [aliphatic attach]												
+Sulfenic		1	R                          AA		1	OH                            SA	-OH [sulfur attach]	1	S-                                AA	-S- [aliphatic attach]									
+Tetrathionate																			
+Disulfide		2	R                          AA		2	S                                SA	-S- [sulfur attach]												
+Thieno		1	CH2                     AA	-CH2- [aliphatic attach]	1	CH2                           ArA	-CH2- [aliphatic attach]	1	S-                             ArA	-S- [aromatic attach]	2	ArC       	AC	2	ArCH                                	ACH	1	ArS	AS
