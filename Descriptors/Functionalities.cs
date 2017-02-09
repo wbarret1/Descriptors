@@ -38,7 +38,21 @@ namespace Descriptors
             {
                 if (a.element == element)
                 {
-                    retVal.Add(a);                    
+                    retVal.Add(a);
+                }
+            }
+            return retVal.ToArray<Atom>();
+        }
+
+        static public Atom[] FindElements(Molecule m, string[] elements)
+        {
+            List<Atom> retVal = new List<Atom>();
+            Atom[] atoms = m.GetAtoms();
+            foreach (Atom a in atoms)
+            {
+                if (elements.Contains(a.element))
+                {
+                    retVal.Add(a);
                 }
             }
             return retVal.ToArray<Atom>();
@@ -47,6 +61,12 @@ namespace Descriptors
         static public Atom[] FindChloride(Molecule m)
         {
             return FindElement(m, "Cl");
+        }
+
+        static public Atom[] FindHalides(Molecule m)
+        {
+            string[] halogens = { "F", "Cl", "Br", "I" };
+            return FindElements(m, halogens);
         }
 
         static public Atom[] FindBromide(Molecule m)

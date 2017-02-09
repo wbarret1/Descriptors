@@ -109,6 +109,7 @@ namespace Descriptors
             Atom[] phosphates = Functionalities.findPhosphate(molecule);
             Atom[] chlorides = Functionalities.FindChloride(molecule);
             Atom[] bromides = Functionalities.FindBromide(molecule);
+            Atom[] halides = Functionalities.FindHalides(molecule);
             Atom[][] hetero = Functionalities.HeteroCyclic(molecule);
             Atom[][] thio = Functionalities.HeteroCyclic(molecule, "S");
             Atom[][] furan = Functionalities.HeteroCyclic(molecule, "O");
