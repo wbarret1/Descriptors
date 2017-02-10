@@ -125,6 +125,14 @@ namespace Descriptors
             ringsFound = false;
         }
 
+        public Atom AddAtom(string element)
+        {
+            Atom a = new Atom(element);
+            atoms.Add(a);
+            ringsFound = false;
+            return a;
+        }
+
         public void AddBond(int atomOne, int atomTwo)
         {
             atoms[atomOne].AddBond(atoms[atomTwo]);

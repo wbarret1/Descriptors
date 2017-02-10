@@ -14,14 +14,14 @@ namespace Descriptors
             Atom[] atoms = m.GetAtoms();
             foreach (Atom a1 in atoms)
             {
-                if (a1.element == "P")
+                if (a1.Element == ELEMENTS.P)
                 {
                     if (a1.BondedAtoms.Length == 4)
                     {
                         bool allOxygen = true;
                         foreach (Atom a2 in a1.BondedAtoms)
                         {
-                            if (a2.element != "O") allOxygen = false;
+                            if (a2.Element != ELEMENTS.O) allOxygen = false;
                         }
                         if (allOxygen) retVal.Add(a1);
                     }
@@ -36,7 +36,7 @@ namespace Descriptors
             Atom[] atoms = m.GetAtoms();
             foreach (Atom a in atoms)
             {
-                if (!retVal.Contains(a.element)) retVal.Add(a.element);
+                if (!retVal.Contains(a.Element.ToString())) retVal.Add(a.Element.ToString());
             }
             return retVal.ToArray();
         }
@@ -47,7 +47,7 @@ namespace Descriptors
             Atom[] atoms = m.GetAtoms();
             foreach (Atom a in atoms)
             {
-                if (a.element == element)
+                if (a.Element.ToString() == element)
                 {
                     retVal.Add(a);
                 }
@@ -61,7 +61,7 @@ namespace Descriptors
             Atom[] atoms = m.GetAtoms();
             foreach (Atom a in atoms)
             {
-                if (elements.Contains(a.element))
+                if (elements.Contains(a.Element.ToString()))
                 {
                     retVal.Add(a);
                 }
@@ -104,7 +104,7 @@ namespace Descriptors
             {
                 foreach (Atom a in atoms)
                 {
-                    if (a.element == element)
+                    if (a.Element.ToString() == element)
                     {
                         retVal.Add(atoms);
                         break;
@@ -123,7 +123,7 @@ namespace Descriptors
             {
                 foreach (Atom a in atoms)
                 {
-                    if (a.element != "C")
+                    if (a.Element != ELEMENTS.C)
                     {
                         retVal.Add(atoms);
                         break;
@@ -165,21 +165,21 @@ namespace Descriptors
                 // If it connected to two other atoms...
                 foreach (Atom bonded in a.BondedAtoms)
                 {
-                    switch (bonded.element)
+                    switch (bonded.Element)
                     {
-                        case "C":
+                        case ELEMENTS.C:
                             C.Add(bonded);
                             break;
-                        case "N":
+                        case ELEMENTS.N:
                             N.Add(bonded);
                             break;
-                        case "O":
+                        case ELEMENTS.O:
                             O.Add(bonded);
                             break;
-                        case "P":
+                        case ELEMENTS.P:
                             P.Add(bonded);
                             break;
-                        case "S":
+                        case ELEMENTS.S:
                             S.Add(bonded);
                             break;
                     }

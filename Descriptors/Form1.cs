@@ -36,6 +36,13 @@ namespace Descriptors
 
         public Form1()
         {
+            //List<string> symbols = new List<string>();
+            //List<string> names = new List<string>();
+            //for (int j = 1; j < 119; j++)
+            //{
+            //    names.Add(Element.Name((ELEMENTS)j));
+            //    symbols.Add(Element.Symbol((ELEMENTS)j));
+            //}
             //this.parseSmiles("c1ccccc1");
             InitializeComponent();
             this.importGroups();
@@ -339,12 +346,11 @@ namespace Descriptors
                 molecule = new Molecule();
                 for (int i = 0; i < numAtoms; i++)
                 {
-                    Atom a = new Atom();
+                    Atom a = molecule.AddAtom(lines[4 + i].Substring(31, 3).Replace(" ", string.Empty));
                     // xxxxx.xxxxyyyyy.yyyyzzzzz.zzzz aaaddcccssshhhbbbvvvHHHrrriiimmmnnneee
                     a.x = Convert.ToDouble(lines[4 + i].Substring(0, 10));
                     a.y = Convert.ToDouble(lines[4 + i].Substring(10, 10));
                     a.z = Convert.ToDouble(lines[4 + i].Substring(20, 10));
-                    a.element = lines[4 + i].Substring(31, 3).Replace(" ", string.Empty);
                     string text = lines[4 + i].Substring(34, 2);
                     a.massDiff = Convert.ToInt32(lines[4 + i].Substring(34, 2));
                     a.charge = Convert.ToInt32(lines[4 + i].Substring(36, 3));
@@ -365,7 +371,7 @@ namespace Descriptors
                     atomRow["X"] = a.x;
                     atomRow["Y"] = a.y;
                     atomRow["Z"] = a.z;
-                    atomRow["element"] = a.element;
+                    atomRow["element"] = a.Element.ToString();
                     atomRow["MassDiff"] = a.massDiff;
                     atomRow["Charge"] = a.charge;
                     atomRow["StereoParity"] = a.stereoParity;
@@ -412,14 +418,16 @@ namespace Descriptors
 
         void parseSmiles(string smile)
         {
-            //string grammarString = Properties.Resources.smilesGrammar;
+            string grammarString = Properties.Resources.smiles_ebnf;
             //string test = grammarString.Substring(0, 844);
-            //var grammar = new Eto.Parse.Grammars.EbnfGrammar(Eto.Parse.Grammars.EbnfStyle.W3c);
-            //grammar.Initialize(new Eto.Parse.ParserInitializeArgs(grammar));
-            //Eto.Parse.Parsers.StringParser parser = new Eto.Parse.Parsers.StringParser();
-            //parser.
-            //grammar.Build(grammarString, "grammar");
-            //grammar.Match(smile);
+            var grammar = new Eto.Parse.Grammars.EbnfGrammar(Eto.Parse.Grammars.EbnfStyle.DoubleColonEquals
+                                                            | Eto.Parse.Grammars.EbnfStyle.CardinalityFlags
+                                                            | Eto.Parse.Grammars.EbnfStyle.CharacterSets
+                                                            | Eto.Parse.Grammars.EbnfStyle.W3c);
+            grammar.Initialize(new Eto.Parse.ParserInitializeArgs(grammar));
+            Eto.Parse.Parsers.StringParser parser = new Eto.Parse.Parsers.StringParser();
+            grammar.Build(grammarString, "grammar");
+            Eto.Parse.Match match = grammar.Match(smile);
 
         }
     }

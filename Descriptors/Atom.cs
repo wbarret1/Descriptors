@@ -6,28 +6,43 @@ using System.Threading.Tasks;
 
 namespace Descriptors
 {
-    enum element
-    {
-        hydrogen = 1,
-        carbon = 6,
-        nitrogen = 7,
-        oxygen = 8,
-
-    };
-
+ 
     class Atom
     {
         List<Atom> bondedAtoms;
 
-        public Atom()
+        public Atom(string element)
         {
             bondedAtoms = new List<Atom>();
+            this.SetElement(element);
         }
+
+        ELEMENTS e;
+        void SetElement(string element)
+        {
+            e = (ELEMENTS)Enum.Parse(typeof(ELEMENTS), element);
+        }
+
+        public ELEMENTS Element { get { return e; } }
 
         public double x { get; set; } = 0.0;
         public double y { get; set; } = 0.0;
         public double z { get; set; } = 0.0;
-        public string element { get; set; } = string.Empty;
+        public string AtomicSymbol
+        {
+            get
+            {
+                return e.ToString();
+            }
+        }
+
+        public string AtomicName
+        {
+            get
+            {
+                return Descriptors.Element.Name(e);
+            }
+        }
         public int massDiff { get; set; } = 0;
         public int charge { get; set; } = 0;
         public int stereoParity { get; set; } = 0;

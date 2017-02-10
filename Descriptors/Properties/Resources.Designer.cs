@@ -61,21 +61,13 @@ namespace Descriptors.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 		Count	Fragment	Count	Fragment	Count	Fragment	Count	Fragment	Count	Fragment		
-        ///													
-        ///ACETALS		4	CH3  AA	2	O    AA	1	&gt;C&lt;    AA						
-        ///													
-        ///ACYLALS (DIESTERS) 													
-        ///													
-        ///ACYLOINS		2	CH3  AA	1	CH   AA	1	OH    AA	1	C=O   AA				
-        ///													
-        ///ALCOHOLS		1	CH3  AA	1	OH    AA								
-        ///													
-        ///&quot;ALCOHOLS, ALLYLIC&quot;		1	CH2  AA	1	OH    AA	1	C=CH  AA	1	C=CH2  AA				
-        ///													
-        /// ALDEHYDES		1	R        AA	1	CH2   AA								
-        ///													
-        ///ALKANES		2	CH3     AA										        /// [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to 	Structure	Count	Fragment	Test Frag	Count	Fragment	Test Frag	Count	Fragment	Test Frag	Count	Fragment	Test Frag	Count	Fragment	Test Frag	Count	Fragment	Test Frag
+        ///Alkanes		2	CH3     AA	-CH3 [aliphatic attach]															
+        ///Alkenes		2	CH2     AA	-CH2- [aliphatic attach]															
+        ///Alkynes		2	CH3     AA	-CH3 [aliphatic attach]															
+        ///Alkyl Halide		1	CH3     AA	-CH3 [aliphatic attach]	1	Cl       AA	-Cl [aliphatic attach]												
+        ///Aromatic		6	ArCH	AC															
+        ///Arenes		8	ArCH	AC	2	Fused  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Copy_of_Full_Functional_Group_List {
             get {
@@ -200,6 +192,49 @@ namespace Descriptors.Properties {
         internal static string fragments {
             get {
                 return ResourceManager.GetString("fragments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to /* Converted from PEG Grammar by http://bottlecaps.de/convert/  */
+        ///
+        ///
+        ///
+        ///SMILES   ::= Atom ( Chain | Branch )*
+        ///
+        ///Chain    ::= ( Bond? ( Atom | RingClosure ) )+
+        ///
+        ///Branch   ::= &apos;(&apos; Bond? SMILES+ &apos;)&apos;
+        ///
+        ///Atom     ::= OrganicSymbol
+        ///
+        ///           | AromaticSymbol
+        ///
+        ///           | AtomSpec
+        ///
+        ///           | WILDCARD
+        ///
+        ///Bond     ::= &apos;-&apos;
+        ///
+        ///           | &apos;=&apos;
+        ///
+        ///           | &apos;#&apos;
+        ///
+        ///           | &apos;$&apos;
+        ///
+        ///           | &apos;:&apos;
+        ///
+        ///           | &apos;/&apos;
+        ///
+        ///           | &apos;\&apos;
+        ///
+        ///           | &apos;.&apos;
+        ///
+        ///AtomSpec ::= &apos;[&apos; Isotope? ( &apos;se&apos; | &apos;as [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string smiles_ebnf {
+            get {
+                return ResourceManager.GetString("smiles_ebnf", resourceCulture);
             }
         }
     }
