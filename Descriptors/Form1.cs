@@ -43,7 +43,29 @@ namespace Descriptors
             //    names.Add(Element.Name((ELEMENTS)j));
             //    symbols.Add(Element.Symbol((ELEMENTS)j));
             //}
-            //this.parseSmiles("c1ccccc1");
+            ////this.parseSmiles("c1ccccc1");
+            //string[] aromatic = { "b", "c", "n", "o", "s", "p" };
+            //List<string> issues = new List<string>();
+            //foreach (string symbol in symbols)
+            //{
+            //    if (symbol.Length == 2)
+            //    {
+            //        char test = symbol[1];
+            //        if (aromatic.Contains(test.ToString()))
+            //        {
+            //            ELEMENTS e = Element.GetElementForSymbol(symbol);
+            //            issues.Add(e.ToString());
+            //        }
+            //    }
+            //}
+            //foreach (string issue in issues.Reverse<string>())
+            //{
+            //    char test = issue[0];
+            //    if (!Element.ValidateSymbol(test.ToString())) issues.Remove(issue);
+            //}
+
+            //issues.Sort();
+           
             InitializeComponent();
             this.importGroups();
             this.listView1.Columns.Add("Name", -2, HorizontalAlignment.Left);
@@ -111,7 +133,7 @@ namespace Descriptors
                 this.ImportMolFile(filename);
             }
             string[] groups = this.TestGroups(nonZeroFragments);
-            string[] elements = Functionalities.Elements(molecule); 
+            string[] elements = Functionalities.Elements(molecule);
             Atom[][] rings = molecule.FindRings();
             Atom[] phosphates = Functionalities.findPhosphate(molecule);
             Atom[] chlorides = Functionalities.FindChloride(molecule);
@@ -252,6 +274,8 @@ namespace Descriptors
         {
             atomTable.Clear();
             bondTable.Clear();
+            molecule = new Molecule();
+
             int numAtoms = 0;
             int numBonds = 0;
 
@@ -365,25 +389,24 @@ namespace Descriptors
                     a.atomMapping = Convert.ToInt32(lines[4 + i].Substring(60, 3));
                     a.inversionRetension = Convert.ToInt32(lines[4 + i].Substring(63, 3));
                     a.exactChange = Convert.ToInt32(lines[4 + i].Substring(66, 3));
-                    molecule.AddAtom(a);
-                    DataRow atomRow = atomTable.NewRow();
-                    atomTable.Rows.Add(atomRow);
-                    atomRow["X"] = a.x;
-                    atomRow["Y"] = a.y;
-                    atomRow["Z"] = a.z;
-                    atomRow["element"] = a.Element.ToString();
-                    atomRow["MassDiff"] = a.massDiff;
-                    atomRow["Charge"] = a.charge;
-                    atomRow["StereoParity"] = a.stereoParity;
-                    atomRow["HydrogenCount"] = a.hydrogenCount;
-                    atomRow["StereoBoxCare"] = a.stereoCareBox;
-                    atomRow["Valence"] = a.valence;
-                    //atomRow["H0"] = a.HO;
-                    atomRow["rNotUsed"] = a.rNotUsed;
-                    atomRow["iNotUsed"] = a.iNotUsed;
-                    atomRow["AtomMapping"] = a.atomMapping;
-                    atomRow["InversionRetention"] = a.inversionRetension;
-                    atomRow["ExactChange"] = a.exactChange;
+                    //DataRow atomRow = atomTable.NewRow();
+                    //atomTable.Rows.Add(atomRow);
+                    //atomRow["X"] = a.x;
+                    //atomRow["Y"] = a.y;
+                    //atomRow["Z"] = a.z;
+                    //atomRow["element"] = a.Element.ToString();
+                    //atomRow["MassDiff"] = a.massDiff;
+                    //atomRow["Charge"] = a.charge;
+                    //atomRow["StereoParity"] = a.stereoParity;
+                    //atomRow["HydrogenCount"] = a.hydrogenCount;
+                    //atomRow["StereoBoxCare"] = a.stereoCareBox;
+                    //atomRow["Valence"] = a.valence;
+                    ////atomRow["H0"] = a.HO;
+                    //atomRow["rNotUsed"] = a.rNotUsed;
+                    //atomRow["iNotUsed"] = a.iNotUsed;
+                    //atomRow["AtomMapping"] = a.atomMapping;
+                    //atomRow["InversionRetention"] = a.inversionRetension;
+                    //atomRow["ExactChange"] = a.exactChange;
 
                 }
                 for (int i = 0; i < numBonds; i++)
@@ -411,24 +434,26 @@ namespace Descriptors
                     bondRow["xNotUsed"] = b.xNotUsed;
                     bondRow["bondTopology"] = b.bondTopology;
                     bondRow["reactingCenter"] = b.reactingCenter;
-                    molecule.AddBond(b.firstAtom-1, b.secondAtom-1);
+                    molecule.AddBond(b.firstAtom - 1, b.secondAtom - 1);
                 }
             }
         }
 
         void parseSmiles(string smile)
         {
-            string grammarString = Properties.Resources.smiles_ebnf;
-            //string test = grammarString.Substring(0, 844);
-            var grammar = new Eto.Parse.Grammars.EbnfGrammar(Eto.Parse.Grammars.EbnfStyle.DoubleColonEquals
-                                                            | Eto.Parse.Grammars.EbnfStyle.CardinalityFlags
-                                                            | Eto.Parse.Grammars.EbnfStyle.CharacterSets
-                                                            | Eto.Parse.Grammars.EbnfStyle.W3c);
-            grammar.Initialize(new Eto.Parse.ParserInitializeArgs(grammar));
-            Eto.Parse.Parsers.StringParser parser = new Eto.Parse.Parsers.StringParser();
-            grammar.Build(grammarString, "grammar");
-            Eto.Parse.Match match = grammar.Match(smile);
-
+            string atoms = "[A-Z] [a-z]?";
+            string aromaticAtoms = "[bcnops]";
+            string hydrogen = "'H' [0-9]?";
+            string ring = @"([0-9]?)(\1)";
+            bool done = false;
+            while (!done)
+            {
+                System.Text.RegularExpressions.Match atom = System.Text.RegularExpressions.Regex.Match(smile, atoms);
+                System.Text.RegularExpressions.Match aromatic = System.Text.RegularExpressions.Regex.Match(smile, aromaticAtoms);
+                System.Text.RegularExpressions.Match hydrogenMatch = System.Text.RegularExpressions.Regex.Match(smile, hydrogen);
+                System.Text.RegularExpressions.Match ringMatch = System.Text.RegularExpressions.Regex.Match(smile, ring);
+                done = true;
+            }
         }
     }
 }

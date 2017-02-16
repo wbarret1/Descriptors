@@ -252,7 +252,7 @@ namespace Descriptors
                     }
                     if ((O.Count == 2) && (N.Count == 2))
                     {
-                        retVal.Add("phosphoramidate");
+                        retVal.Add("phosphorodiamidate");
                     }
                     if ((O.Count == 1) && (N.Count == 3))
                     {
@@ -270,13 +270,13 @@ namespace Descriptors
                     {
                         retVal.Add("phosphinamide");
                     }
-                    if ((O.Count == 2) && (S.Count == 1))
+                    if ((O.Count == 3) && (S.Count == 1))
                     {
-                        retVal.Add("phosphorothioite");
+                        retVal.Add("phosphorothioate");
                     }
-                    if ((O.Count == 1) && (S.Count == 2))
+                    if ((O.Count == 2) && (S.Count == 2))
                     {
-                        retVal.Add("phosphorodithioite");
+                        retVal.Add("phosphorodithioate");
                     }
                 }
             }

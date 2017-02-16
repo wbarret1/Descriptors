@@ -143,6 +143,24 @@ namespace Descriptors
             return e.ToString();
         }
 
+        static public bool ValidateSymbol(string symbol)
+        {
+            for (int i = 1; i < 119; i++)
+            {
+                if (((ELEMENTS)i).ToString() == symbol) return true;
+            }
+            return false;
+        }
+
+        static public ELEMENTS GetElementForSymbol(string symbol)
+        {
+            for (int i = 1; i < 119; i++)
+            {
+                if (((ELEMENTS)i).ToString() == symbol) return (ELEMENTS)i;
+            }
+            return (ELEMENTS)0;
+        }
+
         static public string Name(ELEMENTS e)
         {
             if (e == ELEMENTS.H) return "Hydrogen";
